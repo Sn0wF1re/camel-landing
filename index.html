@@ -2,12 +2,73 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/camel.png" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&family=Luckiest+Guy&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>CamelWiFHump</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <nav>
+        <div class="main-menu">
+          <img class="camel" src="/camel1.png" alt="camel">
+          <li>about</li>
+          <li>tokenomics</li>
+          <li>roadmap</li>
+        </div>
+
+        <div class="purchase">
+          <li class="btn">Buy Hump</li>
+          <img class="telegram" src="/telegram.svg" alt="telegram icon">
+        </div>
+      </nav>
+
+      <section class="content">
+        <article class="left">
+          <h1>$HUMP ON A DESERT OF FAT HUMPY GAINS</h1>
+          <p>
+            Calling all sol degens. Are you tired of dog memes or grumpy cat GIFs? CamelWiFHump is here to set you on a wild ride through the crypto desert, where humps pump, sands fly, and rewards shimmer like mirages. Join the oasis of Bold and daring degen HUMPTIES and unleash your inner desert nomad! Don’t miss this stampede your still early.
+          </p>
+        </article>
+
+        <article class="right">
+          <div class="card">
+            <h3 class="presale">PRESALE NOW LIVE! Ends in:</h3>
+            <div class="countdown">
+              <div class="hours">
+                <h3>24</h3>
+                <p>HOURS</p>
+              </div>
+              <div class="minutes">
+                <h3>24</h3>
+                <p>MINS</p>
+              </div>
+              <div class="seconds">
+                <h3>24</h3>
+                <p>SECS</p>
+              </div>
+            </div>
+            <label>Amount in SOL you pay:</label>
+            <input type="text" name="" id="" placeholder="Min 0.5 SOL | Max 20 SOL">
+
+            <label>Amount of $HUMP you receive:</label>
+            <input type="text" name="" id="" placeholder="1,000,000 HUMP">
+
+            <!-- <button>Buy Hump</button> -->
+            <div id="helioCheckoutContainer"></div>
+          </div>
+        </article>
+      </section>
+
+      <footer>
+        Copyright &copy; 2024 HUMP. All Rights Reserved
+      </footer>
+    </div>
+    <script type="module" crossorigin src="https://embed.hel.io/assets/index-v1.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
