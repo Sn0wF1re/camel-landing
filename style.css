@@ -88,6 +88,7 @@ li {
 
 .right {
   margin-left: 5rem;
+  margin-top: 3rem;
 }
 
 .left {
@@ -181,6 +182,11 @@ button {
   text-transform: uppercase;
 }
 
+a {
+  text-decoration: none;
+  color: #f8a235;
+}
+
 #helioCheckoutContainer {
   font-family: 'Luckiest Guy', cursive, sans-serif;
 }
@@ -188,6 +194,6 @@ button {
 footer {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 10rem;
   padding-bottom: 0.5rem;
 }
