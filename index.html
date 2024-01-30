@@ -68,11 +68,16 @@
       }
       
       .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: #001f3f;
         background-color: #f8a235;
         border-radius: 0.2rem;
         padding: 0.5rem 1rem;
         margin-right: 1rem;
+        width: 6rem;
+        height: 2rem;
         text-transform: uppercase;
         font-family: 'Luckiest Guy', cursive, sans-serif;
       }
@@ -116,7 +121,7 @@
       
       .right {
         margin-left: 5rem;
-        margin-top: 3rem;
+        margin-top: 2rem;
       }
       
       .left {
@@ -126,7 +131,7 @@
       }
       
       .left h1 {
-        font-size: 3rem;
+        font-size: 4rem;
         margin-bottom: 2rem;
         font-family: 'Luckiest Guy', cursive, sans-serif;
       }
@@ -215,6 +220,50 @@
         color: #f8a235;
       }
       
+      .about {
+        display: flex;
+        font-family: "Fredoka", sans-serif;
+        font-size: 20px;
+        margin-bottom: 2rem;
+        margin-left: 4rem;
+        line-height: normal;
+      }
+
+      .about img {
+        width: 40%;
+        height: auto;
+        margin-right: 2rem;
+      }
+
+      .about article {
+        max-width: 27rem;
+        margin-top: 2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .about article p {
+        margin-bottom: 3rem;
+      }
+
+      .tokenomics {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Luckiest Guy", cursive, sans-serif;
+        font-size: 2rem;
+      }
+
+      .tokenomics img {
+        width: 60%;
+        height: auto;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+      }
+
       footer {
         font-family: 'Fredoka', sans-serif;
         text-align: center;
@@ -233,16 +282,20 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          margin-bottom: 3rem;
+          margin-top: 6rem;
         }
       
         .right {
           margin-left: 0;
-          margin-top: 4rem;
+          margin-top: 1rem;
         }
       
         .left p, .left h1 {
           text-align: center;
+        }
+
+        .left h1 {
+          font-size: 3rem;
         }
       
         .desktop-nav {
@@ -253,6 +306,10 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
+        }
+
+        .mobi-nav .purchase .btn {
+          margin-right: 0;
         }
       
         .mobi-main-menu {
@@ -290,6 +347,28 @@
         .toggle-active .line:nth-child(3) {
           transform: rotate(45deg) translate(-9px, -11px);
         }
+
+        .about {
+          flex-direction: column;
+          align-items: center;
+          margin-left: 0;
+          margin-top: 0;
+        }
+
+        .about img {
+          display: none;
+          margin-top: 0;
+        }
+
+        .tokenomics {
+          margin-top: 8rem;
+        }
+
+        .tokenomics img {
+          width: 80%;
+          margin-top: 1rem;
+          margin-bottom: 3rem;
+        }
       
         footer {
           margin-bottom: 1rem;
@@ -302,9 +381,8 @@
       <nav class="desktop-nav">
         <div class="main-menu">
           <img class="camel" src="/camel1.png" alt="camel">
-          <li>about</li>
-          <li>tokenomics</li>
-          <li>roadmap</li>
+          <a href="#about">about</a>
+          <a href="#tokenomics">tokenomics</a>
         </div>
 
         <div class="purchase">
@@ -322,29 +400,25 @@
   
         
         <div class="purchase">
-          <a href="https://app.hel.io/pay/65ab8a70639cf3476bd09d6e" target="_blank" class="btn">Buy Hump</li>
-            <a href="https://t.me/camelwifhump" target="_blank" class="telegram"><img src="/telegram.svg" alt="telegram icon"></a>
+          <a href="https://t.me/camelwifhump" target="_blank" class="telegram"><img src="/telegram.svg" alt="telegram icon"></a>
+          <a href="https://app.hel.io/pay/65ab8a70639cf3476bd09d6e" target="_blank" class="btn">Buy Hump</a>
           </div>
         </header>
         
         <nav class="mobi-main-menu">
           <img class="camel" src="/camel1.png" alt="camel">
-          <li>about</li>
-          <li>tokenomics</li>
-          <li>roadmap</li>
+          <a href="#about">about</a>
+          <a href="#tokenomics">tokenomics</a>
         </nav>
 
       <section class="content">
         <article class="left">
           <h1>$HUMP ON A DESERT OF FAT HUMPY GAINS</h1>
-          <p>
-            Calling all sol degens. Are you tired of dog memes or grumpy cat GIFs? CamelWiFHump is here to set you on a wild ride through the crypto desert, where humps pump, sands fly, and rewards shimmer like mirages. Join the oasis of Bold and Daring degen HUMPTIES, and unleash your inner desert nomad! Don't miss this stampede. You're still early!
-          </p>
         </article>
 
         <article class="right">
           <div class="card">
-            <h3 class="presale">PRESALE NOW LIVE! Ends in:</h3>
+            <h3 class="presale">PRESALE COMING SOON! Starts in:</h3>
             <div class="countdown">
               <div class="hours">
                 <h3 id="hrs">24</h3>
@@ -371,6 +445,25 @@
         </article>
       </section>
 
+      <section class="about" id="about">
+        <img src="/astrocamel.png" alt="camel with space suit">
+        <article>
+          <p>
+            To all degens, are you tired of missing out on dog memes and grumpy cat coins?
+            I'm CamelWiFHump, ready to set you on a wild ride through the crypto desert,
+            where humps pump, sands fly, and rewards shimmer like mirages.
+            Join me in the oasis of Bold and Daring degen HUMPTIES ready to unleash your inner desert nomad!
+            Don't miss! You're still early.
+          </p>
+
+          <a href="https://app.hel.io/pay/65ab8a70639cf3476bd09d6e" class="btn" target="_blank">Buy Hump</a>
+        </article>
+      </section>
+
+      <section class="tokenomics" id="tokenomics">
+        <h3>TOKENOMICS</h3>
+        <img src="/tokenomics.png" alt="Hump tokenomics chart">
+      </section>
     </div>
     <footer>
       Copyright &copy; 2024 HUMP. All Rights Reserved
@@ -394,7 +487,7 @@
       
       // Function to update the countdown
       const updateCountdown = () => {
-        const endDate = new Date('2024-01-31T00:00:00'); // Replace with your actual end date
+        const endDate = new Date('2024-02-01T15:00:00'); // Replace with your actual end date
         const currentDate = new Date();
       
         const timeDifference = endDate - currentDate;
