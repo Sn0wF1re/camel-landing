@@ -421,15 +421,15 @@
             <h3 class="presale">PRESALE COMING SOON! Starts in:</h3>
             <div class="countdown">
               <div class="hours">
-                <h3 id="hrs">24</h3>
+                <h3 id="hrs">00</h3>
                 <p>HOURS</p>
               </div>
               <div class="minutes">
-                <h3 id="mins">24</h3>
+                <h3 id="mins">00</h3>
                 <p>MINS</p>
               </div>
               <div class="seconds">
-                <h3 id="secs">24</h3>
+                <h3 id="secs">00</h3>
                 <p>SECS</p>
               </div>
             </div>
@@ -482,19 +482,22 @@
       };
       
       document.querySelector(".nav-toggle").addEventListener("click", toggleMenu);
-      
-      // Add this JavaScript code to your main.js
-      
-      // Function to update the countdown
       const updateCountdown = () => {
-        const endDate = new Date('2024-02-01T15:00:00'); // Replace with your actual end date
+        const endDate = new Date('2024-02-02T16:30:00Z');
         const currentDate = new Date();
-      
+        
         const timeDifference = endDate - currentDate;
-      
+        
+        if (timeDifference <= 0) {
+          // Countdown reached zero, stop the interval
+          clearInterval(intervalId);
+          return;
+        }
+        
         const hours = Math.floor(timeDifference / (1000 * 60 * 60));
-        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));  
         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        
         // Update the HTML elements with the calculated values
         document.getElementById('hrs').textContent = hours < 10 ? `0${hours}` : hours;
         document.getElementById('mins').textContent = minutes < 10 ? `0${minutes}` : minutes;
@@ -505,7 +508,7 @@
       updateCountdown();
       
       // Set up an interval to update the countdown every second
-      setInterval(updateCountdown, 1000);
+      const intervalId = setInterval(updateCountdown, 1000);
     </script>
   </body>
 </html>
