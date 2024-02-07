@@ -12,7 +12,7 @@
     <title>CamelWiFHump</title>
     <style>
       :root {
-        margin: 2rem 5rem;
+        margin: 4rem 5rem;
         max-width: 100%;
         font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
         line-height: 1.5;
@@ -41,14 +41,9 @@
         min-height: 100vh;
       }
       
-      #app {
-        flex: 1;
-      }
-      
       .desktop-nav {
-        display: grid;
-        grid-template-columns: repeat(2, 25rem);
-        justify-content: space-around;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 3rem;
         font-family: 'Fredoka', sans-serif;
@@ -59,7 +54,7 @@
       }
       
       .camel {
-        width: 12%;
+        width: 15%;
         height: auto;
       }
       
@@ -71,11 +66,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-right: 1.2rem;
         color: #001f3f;
         background-color: #f8a235;
         border-radius: 0.2rem;
         padding: 0.5rem 1rem;
-        margin-right: 1rem;
         width: 6rem;
         height: 2rem;
         text-transform: uppercase;
@@ -92,14 +87,12 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        max-width: 30rem;
+        max-width: 40rem;
       }
       
       .purchase {
         display: flex;
         align-items: center;
-        max-width: 22rem;
-        margin-left: 4rem;
       }
       
       .telegram img {
@@ -108,99 +101,88 @@
       }
       
       .content {
-        display: grid;
-        grid-template-columns: repeat(2, 30rem);
-        column-gap: 1rem;
-        justify-content: center;
-        margin-bottom: 2rem;
-      }
-      
-      .content p, label, .presale, input::placeholder {
-        font-family: 'Fredoka', sans-serif;
-      }
-      
-      .right {
-        margin-left: 5rem;
-        margin-top: 2rem;
-      }
-      
-      .left {
-        max-width: 28rem;
-        line-height: normal;
-        margin-top: 2rem;
-      }
-      
-      .left h1 {
-        font-size: 4rem;
-        margin-bottom: 2rem;
-        font-family: 'Luckiest Guy', cursive, sans-serif;
-      }
-      
-      .card {
-        background-color: #f8a235;
-        color: #001f3f;
-        padding: 1.5rem;
-        border-radius: 0.5rem;
-        max-width: 20rem;
-      }
-      
-      .countdown {
-        /* display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1rem; */
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 1rem;
-        margin-bottom: 1rem;
-      }
-      
-      .card p, input {
-        margin-bottom: 1rem;
-      }
-      
-      .presale {
-        margin-bottom: 1rem;
-        text-align: center;
-        font-size: 20px;
-      }
-      
-      label {
-        display: block;
-        margin-bottom: 0.2rem;
-      }
-      
-      input {
-        padding: 0.5rem;
-        border-radius: 0.2rem;
-        border: 1px solid;
-        background-color: rgba(245, 245, 245, 0.1);
-        min-width: 95%;
-      }
-      
-      input::placeholder {
-        color: #f5f5f5;
-        opacity: 1;
-      }
-      
-      .hours, .minutes, .seconds {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        background-color: #001f3f;
-        color: #f5f5f5;
-        padding: 0.5rem;
-        border-radius: 0.2rem;
-        min-width: 3rem;
       }
       
-      .hours h3, .minutes h3, .seconds h3 {
-        font-size: 1.4rem;
+      .content p {
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 1.2rem;
+        max-width: 40rem;
+        text-align: center;
+        margin-bottom: 3rem;
+
       }
       
-      .hours p, .minutes p, .seconds p {
-        margin-bottom: 0;
-        font-size: 0.6rem;
+      .heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Luckiest Guy', cursive, sans-serif;
+        margin-bottom: 2rem;
+      }
+      
+      .heading h1 {
+        font-size: 6rem;
+      }
+
+      .heading h2 {
+        max-width: 35rem;
+        font-size: 3.5rem;
+      }
+
+      iframe {
+        margin-bottom: 3rem;
+      }
+
+      .manifesto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 3rem;
+      }
+      
+      .manifesto h2 {
+        font-size: 2rem;
+        font-family: "Luckiest Guy", cursive, sans-serif;
+      }
+
+      .token-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .small-details {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 4.5rem;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+      }
+
+      .about-token {
+        border: 3px solid #f8a235;
+        border-radius: 0.25rem;
+        padding: 0.5rem 1rem;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        width: 9rem;
+        text-align: center;
+      }
+
+      .contract-address {
+        margin-top: 1.5rem;
+        margin-bottom: 10rem;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        padding: 0.5rem 1rem;
+        border: 3px solid #f8a235;
+        border-radius: 0.25rem;
       }
       
       button {
@@ -219,56 +201,12 @@
         text-decoration: none;
         color: #f8a235;
       }
-      
-      .about {
-        display: flex;
-        font-family: "Fredoka", sans-serif;
-        font-size: 20px;
-        margin-bottom: 2rem;
-        margin-left: 4rem;
-        line-height: normal;
-      }
-
-      .about img {
-        width: 40%;
-        height: auto;
-        margin-right: 2rem;
-      }
-
-      .about article {
-        max-width: 27rem;
-        margin-top: 2rem;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .about article p {
-        margin-bottom: 3rem;
-      }
-
-      .tokenomics {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: "Luckiest Guy", cursive, sans-serif;
-        font-size: 2rem;
-      }
-
-      .tokenomics img {
-        width: 60%;
-        height: auto;
-        margin-top: 3rem;
-        margin-bottom: 5rem;
-      }
 
       footer {
         font-family: 'Fredoka', sans-serif;
         text-align: center;
         margin-top: auto;
-        padding-bottom: 0.5rem;
+        margin-bottom: 2rem;
       }
       
       @media (max-width: 850px) {
@@ -285,17 +223,16 @@
           margin-top: 6rem;
         }
       
-        .right {
-          margin-left: 0;
-          margin-top: 1rem;
-        }
-      
-        .left p, .left h1 {
+        .heading p, .heading h1, .heading h2 {
           text-align: center;
         }
 
-        .left h1 {
+        .heading h1 {
           font-size: 3rem;
+        }
+
+        .heading h2 {
+          font-size: 2rem;
         }
       
         .desktop-nav {
@@ -348,26 +285,26 @@
           transform: rotate(45deg) translate(-9px, -11px);
         }
 
-        .about {
+        iframe {
+          width: 100%;
+          height: 300px;
+        }
+
+        .small-details {
+          display: flex;
           flex-direction: column;
           align-items: center;
-          margin-left: 0;
+        }
+
+        .about-token {
+          margin-bottom: 1rem;
+        }
+
+        .contract-address {
+          width: 100%;
+          font-size: 0.8rem;
           margin-top: 0;
-        }
-
-        .about img {
-          display: none;
-          margin-top: 0;
-        }
-
-        .tokenomics {
-          margin-top: 8rem;
-        }
-
-        .tokenomics img {
-          width: 80%;
-          margin-top: 1rem;
-          margin-bottom: 3rem;
+          text-align: center;
         }
       
         footer {
@@ -377,98 +314,77 @@
     </style>
   </head>
   <body>
-    <div id="app">
-      <nav class="desktop-nav">
-        <div class="main-menu">
-          <img class="camel" src="/camel1.png" alt="camel">
-          <a href="#about">about</a>
-          <a href="#tokenomics">tokenomics</a>
+    <nav class="desktop-nav">
+      <div class="main-menu">
+        <img class="camel" src="/camel1.png" alt="camel">
+        <a href="#about">about</a>
+        <a href="#manifesto">manifesto</a>
+      </div>
+      <div class="purchase">
+        <a href="#" target="_blank" class="btn">Buy Hump</a>
+        <a href="https://t.me/camelwifhump" target="_blank" class="telegram"><img src="/telegram.svg" alt="telegram icon"></a>
+      </div>
+    </nav>
+    
+    <header class="mobi-nav">
+      <div class="nav-toggle">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+
+      
+      <div class="purchase">
+        <a href="https://t.me/camelwifhump" target="_blank" class="telegram"><img src="/telegram.svg" alt="telegram icon"></a>
+        <a href="#" target="_blank" class="btn">Buy Hump</a>
+      </div>
+    </header>
+      
+    <nav class="mobi-main-menu">
+      <img class="camel" src="/camel1.png" alt="camel">
+      <a href="#about">about</a>
+      <a href="#manifesto">manifesto</a>
+    </nav>
+    <section class="content">
+      <article class="heading">
+        <h1>Wooo! Wooo!</h1>
+        <h2>$HUMP ON A DESERT OF FAT HUMPY GAINS</h2>
+      </article>
+      <iframe id="about" src="https://www.youtube.com/embed/6tgpaW1CWLo" width="600" height="400" frameborder="0" allowfullscreen></iframe>
+      <p>
+        Like the legendary traders relied on camels
+        to navigate treacherous sands,
+        their humps storing life-saving water.
+        HUMP is your oasis in the meta, offering a community of savvy degens and rug-proof tools
+        to keep your crypto safe from rugs and scams.
+      </p>
+      <a href="#" target="_blank" class="btn">Buy Hump</a>
+      <article class="manifesto" id="manifesto">
+        <h2>MANIFESTO</h2>
+        <p>
+          Dust off your FOMO, degen friend,
+          HUMP's oasis beckons, no need to pretend.
+          Rug pulls tremble, scams take flight,
+          herd immunity, hodl on tight.
+          Diamond hands forged, knowledge gleams,
+          Rug Radar sniffs, exposing schemes.
+          So join the stampede, let profits bloom,
+          HUMP your ticket, to the DeFi moon!
+        </p>
+      </article>
+      <div class="token-details"></div>
+        <div class="small-details">
+          <li class="about-token">Symbol: $HUMP</li>
+          <li class="about-token">Tax: $0</li>
+          <li class="about-token">Liquidity: Burnt &#x1f525;</li>
         </div>
-
-        <div class="purchase">
-          <a href="https://app.hel.io/pay/65ab8a70639cf3476bd09d6e" target="_blank" class="btn">Buy Hump</li>
-          <a href="https://t.me/camelwifhump" target="_blank" class="telegram"><img src="/telegram.svg" alt="telegram icon"></a>
-        </div>
-      </nav>
-
-      <header class="mobi-nav">
-        <div class="nav-toggle">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </div>
-  
-        
-        <div class="purchase">
-          <a href="https://t.me/camelwifhump" target="_blank" class="telegram"><img src="/telegram.svg" alt="telegram icon"></a>
-          <a href="https://app.hel.io/pay/65ab8a70639cf3476bd09d6e" target="_blank" class="btn">Buy Hump</a>
-          </div>
-        </header>
-        
-        <nav class="mobi-main-menu">
-          <img class="camel" src="/camel1.png" alt="camel">
-          <a href="#about">about</a>
-          <a href="#tokenomics">tokenomics</a>
-        </nav>
-
-      <section class="content">
-        <article class="left">
-          <h1>$HUMP ON A DESERT OF FAT HUMPY GAINS</h1>
-        </article>
-
-        <article class="right">
-          <div class="card">
-            <h3 class="presale">PRESALE NOW LIVE! Ends in:</h3>
-            <div class="countdown">
-              <div class="hours">
-                <h3 id="hrs">00</h3>
-                <p>HOURS</p>
-              </div>
-              <div class="minutes">
-                <h3 id="mins">00</h3>
-                <p>MINS</p>
-              </div>
-              <div class="seconds">
-                <h3 id="secs">00</h3>
-                <p>SECS</p>
-              </div>
-            </div>
-            <!-- <label>Amount in SOL you pay:</label>
-            <input type="text" name="" id="" placeholder="Min 0.5 SOL | Max 20 SOL">
-
-            <label>Amount of $HUMP you receive:</label>
-            <input type="text" name="" id="" placeholder="1,000,000 HUMP"> -->
-
-            <button><a href="https://app.hel.io/pay/65ab8a70639cf3476bd09d6e" target="_blank">Buy Hump</a></button>
-            <!-- <div id="helioCheckoutContainer"></div> -->
-          </div>
-        </article>
-      </section>
-
-      <section class="about" id="about">
-        <img src="/astrocamel.png" alt="camel with space suit">
-        <article>
-          <p>
-            To all degens, are you tired of missing out on dog memes and grumpy cat coins?
-            I'm CamelWiFHump, ready to set you on a wild ride through the crypto desert,
-            where humps pump, sands fly, and rewards shimmer like mirages.
-            Join me in the oasis of Bold and Daring degen HUMPTIES ready to unleash your inner desert nomad!
-            Don't miss! You're still early.
-          </p>
-
-          <a href="https://app.hel.io/pay/65ab8a70639cf3476bd09d6e" class="btn" target="_blank">Buy Hump</a>
-        </article>
-      </section>
-
-      <section class="tokenomics" id="tokenomics">
-        <h3>TOKENOMICS</h3>
-        <img src="/tokenomics.png" alt="Hump tokenomics chart">
-      </section>
-    </div>
+        <li class="contract-address">Token Address (click to copy): <span onclick="navigator.clipboard.writeText(this.textContent)">9GcUJiHbSc5Ge2a4vyMNbhUnt9ZC42jw5rBDoayvXt9B</span></li>
+      </div>
+    </section>
     <footer>
       Copyright &copy; 2024 HUMP. All Rights Reserved
     </footer>
-    <script type="module" crossorigin src="https://embed.hel.io/assets/index-v1.js"></script>
+
     <script>
       let mobileMenuVisible = false;
 
@@ -482,33 +398,6 @@
       };
       
       document.querySelector(".nav-toggle").addEventListener("click", toggleMenu);
-      const updateCountdown = () => {
-        const endDate = new Date('2024-02-07T18:00:00Z');
-        const currentDate = new Date();
-        
-        const timeDifference = endDate - currentDate;
-        
-        if (timeDifference <= 0) {
-          // Countdown reached zero, stop the interval
-          clearInterval(intervalId);
-          return;
-        }
-        
-        const hours = Math.floor(timeDifference / (1000 * 60 * 60));
-        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));  
-        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-        
-        // Update the HTML elements with the calculated values
-        document.getElementById('hrs').textContent = hours < 10 ? `0${hours}` : hours;
-        document.getElementById('mins').textContent = minutes < 10 ? `0${minutes}` : minutes;
-        document.getElementById('secs').textContent = seconds < 10 ? `0${seconds}` : seconds;
-      };
-      
-      // Initial call to set the initial values
-      updateCountdown();
-      
-      // Set up an interval to update the countdown every second
-      const intervalId = setInterval(updateCountdown, 1000);
     </script>
   </body>
 </html>
